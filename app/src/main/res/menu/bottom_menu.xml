@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/skycloud"
+        android:id="@+id/today_emotion"
+        android:title="오늘의감성"/>
+
+    <item
+        android:icon="@drawable/shinigstar"
+        android:id="@+id/today_emotionsaying"
+        android:title="너의감성은"/>
+
+    <item
+        android:icon="@drawable/skycloud"
+        android:id="@+id/today_wisesaying"
+        android:title="너의명언은"/>
+
+</menu>
