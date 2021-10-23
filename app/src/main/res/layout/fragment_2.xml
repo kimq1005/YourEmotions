@@ -5,17 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".Fragment2">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="프레그먼트 2" />
-
-
-    </RelativeLayout>
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:text="프래그먼트 2"/>
 
 
 

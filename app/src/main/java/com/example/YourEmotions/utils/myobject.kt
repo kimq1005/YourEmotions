@@ -1,8 +1,7 @@
 package com.example.YourEmotions.utils
 
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.YourEmotions.Fragment1
+import com.example.YourEmotions.fragment1.Fragment1
 import com.example.YourEmotions.Fragment2
 import com.example.YourEmotions.Fragment3
 import com.example.YourEmotions.R

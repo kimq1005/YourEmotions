@@ -3,8 +3,7 @@ package com.example.YourEmotions
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.YourEmotions.utils.myobject
-import com.example.YourEmotions.utils.myobject.onBottomNavItemSeletedListener
+import com.example.YourEmotions.fragment1.Fragment1
 import com.example.YourEmotions.utils.utils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -15,6 +14,7 @@ class SecondAactivity : AppCompatActivity(){
     private lateinit var fragment1: Fragment1
     private lateinit var fragment2: Fragment2
     private lateinit var fragment3: Fragment3
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

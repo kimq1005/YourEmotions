@@ -4,20 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment1">
+    tools:context=".fragment1.Fragment1">
 
 
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/emotionsaying_RecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="fragemtn1" />
-
-    </RelativeLayout>
+        android:layout_height="match_parent"/>
 
 
 
