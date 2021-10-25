@@ -36,8 +36,6 @@ class Fragment1 : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?, ): View?
     {
-
-
         return inflater.inflate(R.layout.fragment_1, container, false)
     }
 
@@ -49,16 +47,18 @@ class Fragment1 : Fragment() {
             Emotions_item("안녕 클레오파트라"),
             Emotions_item("안녕 클레오파트라"),
             Emotions_item("안녕 클레오파트라"),
-            Emotions_item("안녕 클레오파트라"),
-
+            Emotions_item("안녕 클레오파트라")
             )
 
         emotionsaying_RecyclerView.apply {
             fragment1Adapter = fragment1_Adapter()
             adapter = fragment1Adapter
-            layoutManager = GridLayoutManager(App.instance ,1,GridLayoutManager.VERTICAL,false)
+            layoutManager = GridLayoutManager(App.instance ,2,GridLayoutManager.VERTICAL,false)
             fragment1Adapter.submitlist(hihi)
+
         }
     }
+
+
 
 }

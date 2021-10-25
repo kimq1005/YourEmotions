@@ -3,13 +3,19 @@ package com.example.YourEmotions
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
+import android.widget.Toast
+import androidx.core.view.GravityCompat
 import com.example.YourEmotions.fragment1.Fragment1
 import com.example.YourEmotions.utils.utils
+import com.example.YourEmotions.utils.utils.Companion.TAG
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 
 import kotlinx.android.synthetic.main.activity_second_aactivity.*
+import kotlinx.android.synthetic.main.main_toolbar.*
 
-class SecondAactivity : AppCompatActivity(){
+class SecondAactivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
 
     private lateinit var fragment1: Fragment1
     private lateinit var fragment2: Fragment2
@@ -20,6 +26,12 @@ class SecondAactivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_aactivity)
 
+
+        menumenu.setOnClickListener {
+            second_layoutdrawer.openDrawer(GravityCompat.START)
+        }
+
+        navi_view.setNavigationItemSelectedListener(this)
 
         bottomnaviselect()
 
@@ -68,12 +80,37 @@ class SecondAactivity : AppCompatActivity(){
         supportFragmentManager.beginTransaction().add(R.id.myframelayout,fragment1).commit()
     }
 
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {    //네비게이션 메뉴 아니템 클릭 시 수행
+        when (item.itemId)
+        {
+            R.id.today_emotion-> Toast.makeText(this,"하이요",Toast.LENGTH_SHORT).show()
+
+            R.id.today_emotionsaying-> Toast.makeText(this,"하이요",Toast.LENGTH_SHORT).show()
+
+            R.id.today_wisesaying-> Toast.makeText(this,"하이요",Toast.LENGTH_SHORT).show()
+
+        }
+        second_layoutdrawer.closeDrawers()  //클릭했을시에 메뉴를 닫아줘
+
+        return false
+    }
+
+    override fun onBackPressed() {
+
+        if(second_layoutdrawer.isDrawerOpen(GravityCompat.START))
+        {
+            second_layoutdrawer.closeDrawers()
+        }
+
+        else{
+            super.onBackPressed()
+        }
 
 
 
+    }
 
-
-
+}
 //    override fun onNavigationItemSelected(item: MenuItem): Boolean {
 //
 //        when (item.itemId) {
@@ -94,4 +131,3 @@ class SecondAactivity : AppCompatActivity(){
 
 
 
-}

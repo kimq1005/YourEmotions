@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/layout/emotionssaying_item.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/drawable/all_coners_black_stroke.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1953125" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/drawable/mymenu.xml" value="0.1953125" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/layout/activity_second_aactivity.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/layout/emotionssaying_item.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/layout/fragment_1.xml" value="0.14537037037037037" />
         <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/layout/fragment_2.xml" value="0.14537037037037037" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/layout/main_header_menu.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/layout/main_toolbar.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/menu/bottom_menu.xml" value="0.14537037037037037" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/menu/top_appbar.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/menu/top_menu.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/menu/top_navigationview.xml" value="0.1" />
       </map>
     </option>
   </component>
