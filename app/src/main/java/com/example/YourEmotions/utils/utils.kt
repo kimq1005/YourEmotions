@@ -1,7 +1,7 @@
 package com.example.YourEmotions.utils
 
 import com.example.YourEmotions.fragment1.Fragment1
-import com.example.YourEmotions.Fragment2
+import com.example.YourEmotions.fragment2.Fragment2
 import com.example.YourEmotions.Fragment3
 
 class utils {

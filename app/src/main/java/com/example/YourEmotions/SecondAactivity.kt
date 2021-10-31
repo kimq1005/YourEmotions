@@ -7,8 +7,8 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.core.view.GravityCompat
 import com.example.YourEmotions.fragment1.Fragment1
+import com.example.YourEmotions.fragment2.Fragment2
 import com.example.YourEmotions.utils.utils
-import com.example.YourEmotions.utils.utils.Companion.TAG
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 

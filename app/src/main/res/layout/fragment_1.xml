@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/all_rectangle_radius"
     tools:context=".fragment1.Fragment1">
 
 
     <androidx.recyclerview.widget.RecyclerView
-
+        android:layout_margin="20dp"
         android:id="@+id/emotionsaying_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -35,6 +35,7 @@ class fragment1_Adapter(private var emotionsItem: List<Emotions_item>):RecyclerV
             val youremotions = itemView.your_emotions_txt
             val yourname = itemView.your_name_txt
 
+
             youremotions.text = emotionsItem.emotionsaying
             yourname.text = emotionsItem.name
         }

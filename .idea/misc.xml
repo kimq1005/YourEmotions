@@ -16,10 +16,16 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/menu/top_appbar.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/menu/top_menu.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/YourEmotions/app/src/main/res/menu/top_navigationview.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/all_radius_corner.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/all_rectangle_radius.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/activity_second_aactivity.xml" value="0.20606884057971014" />
+        <entry key="app/src/main/res/layout/emotionssaying_item.xml" value="0.20606884057971014" />
+        <entry key="app/src/main/res/layout/fragment_1.xml" value="0.1897644927536232" />
+        <entry key="app/src/main/res/layout/fragment_2.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

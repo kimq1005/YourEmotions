@@ -3,12 +3,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment2">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/myblackcolor"
+    tools:context=".fragment2.Fragment2">
 
-   <TextView
+   <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:text="프래그먼트 2"/>
+       android:layout_height="match_parent">
+
+      <View
+          android:id="@+id/myView"
+          android:layout_marginEnd="30dp"
+          android:layout_marginStart="30dp"
+          android:background="@drawable/all_rectangle_radius"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintDimensionRatio="H,1:1"/>
+
+      <TextView
+          android:id="@+id/Fragment2_textView"
+          android:textColor="@color/white"
+          app:layout_constraintTop_toTopOf="@+id/myView"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintBottom_toTopOf="@+id/YourSaying"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="당신의 감성을..."
+          app:layout_constraintDimensionRatio=""
+          android:textSize="30sp"/>
+
+      <EditText
+          android:id="@+id/YourSaying"
+          android:layout_margin="20dp"
+          android:backgroundTint="@color/white"
+          android:textColor="@color/white"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          app:layout_constraintEnd_toEndOf="@+id/myView"
+          app:layout_constraintStart_toStartOf="@+id/myView"
+          app:layout_constraintTop_toBottomOf="@+id/Fragment2_textView"
+          app:layout_constraintBottom_toTopOf="@+id/save_Your_EmotionsBtn"/>
+
+      <TextView
+          android:background="@drawable/all_rectangle_radius"
+          android:gravity="center"
+          android:id="@+id/save_Your_EmotionsBtn"
+          android:text="감성 저장.."
+          android:layout_width="0dp"
+          android:textColor="@color/white"
+          android:layout_height="30dp"
+          app:layout_constraintTop_toBottomOf="@+id/YourSaying"
+          app:layout_constraintEnd_toEndOf="@id/YourSaying"
+          app:layout_constraintBottom_toBottomOf="@+id/myView"
+          app:layout_constraintStart_toStartOf="@+id/YourSaying"
+          />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 

@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_1.*
 
 class Fragment1 : Fragment() {
 
-    private var fragment1Adapter = fragment1_Adapter()
+//    private var fragment1Adapter = fragment1_Adapter()
 
 
     companion object{
@@ -42,19 +42,20 @@ class Fragment1 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val hihi = arrayListOf(
-            Emotions_item("안녕 클레오파트라"),
-            Emotions_item("안녕 클레오파트라"),
-            Emotions_item("안녕 클레오파트라"),
-            Emotions_item("안녕 클레오파트라"),
-            Emotions_item("안녕 클레오파트라")
+            Emotions_item("안녕 클레오파트라","김승"),
+            Emotions_item("안녕 클레오파트라","김승현"),
+            Emotions_item("안녕 클레오파트라","김승현"),
+            Emotions_item("안녕 클레오파트라","김승현"),
+            Emotions_item("안녕 클레오파트라","김승현")
             )
 
         emotionsaying_RecyclerView.apply {
-            fragment1Adapter = fragment1_Adapter()
-            adapter = fragment1Adapter
+            adapter = fragment1_Adapter(hihi)
             layoutManager = GridLayoutManager(App.instance ,2,GridLayoutManager.VERTICAL,false)
-            fragment1Adapter.submitlist(hihi)
+
+
 
         }
     }
