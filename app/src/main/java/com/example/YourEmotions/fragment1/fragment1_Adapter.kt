@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.YourEmotions.EmotionsDB.EmotionsEntity
 import com.example.YourEmotions.R
 import kotlinx.android.synthetic.main.emotionssaying_item.view.*
 
-class fragment1_Adapter(private var emotionsItem: List<Emotions_item>):RecyclerView.Adapter<fragment1_Adapter.fragment1_Viewholder>() {
+class fragment1_Adapter():RecyclerView.Adapter<fragment1_Adapter.fragment1_Viewholder>() {
 
-
+    lateinit var emotionsItem: List<EmotionsEntity>
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): fragment1_Viewholder {
@@ -31,19 +32,16 @@ class fragment1_Adapter(private var emotionsItem: List<Emotions_item>):RecyclerV
 
     class fragment1_Viewholder(itemView:View):RecyclerView.ViewHolder(itemView){
 
-        fun bind(emotionsItem: Emotions_item){
+        fun bind(emotionsItem: EmotionsEntity){
             val youremotions = itemView.your_emotions_txt
-            val yourname = itemView.your_name_txt
+            youremotions.text = emotionsItem.youremotion
 
-
-            youremotions.text = emotionsItem.emotionsaying
-            yourname.text = emotionsItem.name
         }
 
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun submitlist(list: List<Emotions_item>){
+    fun submitlist(list: List<EmotionsEntity>){
         emotionsItem=list
         notifyDataSetChanged()
     }

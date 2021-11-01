@@ -19,7 +19,7 @@ abstract class EmotionsDataBase : RoomDatabase(){
                 synchronized(EmotionsDataBase::class){
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
                         EmotionsDataBase::class.java, "emotions.db")
-                        .fallbackToDestructiveMigration()
+                        .allowMainThreadQueries()
                         .build()
                 }
             }

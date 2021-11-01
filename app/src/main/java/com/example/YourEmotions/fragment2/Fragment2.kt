@@ -9,17 +9,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.example.YourEmotions.EmotionsDB.EmotionsDataBase
 import com.example.YourEmotions.EmotionsDB.EmotionsEntity
 import com.example.YourEmotions.R
 import com.example.YourEmotions.utils.App
 import com.example.YourEmotions.utils.utils.Companion.TAG
+import kotlinx.android.synthetic.main.emotionssaying_item.*
 import kotlinx.android.synthetic.main.fragment_2.*
 
-(@SuppressLint("StaticFieldLeak")
+@SuppressLint("StaticFieldLeak")
 class Fragment2 : Fragment() {
 
     lateinit var emotionsdb:EmotionsDataBase
+
+    lateinit var emotionslist : List<EmotionsEntity>
 
     companion object{
         fun newInstance() : Fragment2 {
@@ -43,19 +48,25 @@ class Fragment2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        emotionsdb = EmotionsDataBase.getinstance(App.instance)!!
+
+
+
+//        daotest_txt.setOnClickListener {
+//            emotionsdb.EmotionsDAO().emotionsgetAll().observe(viewLifecycleOwner, Observer { it->
+//                daotest_txt.text = it.toString()
+//                Toast.makeText(App.instance,"dmdfszf",Toast.LENGTH_SHORT).show()
+//            })
+//        }
+
+
         save_Your_EmotionsBtn.setOnClickListener{
+            val yoursaying = EmotionsEntity(0,YourSaying.text.toString())
+            emotionsinsert(yoursaying)
 
-
-            val myemtions = EmotionsEntity(
-                null,YourSaying.text.toString(),"김승현"
-            )
-
-            val emotionslist = EmotionsEntity.indices
-
-
-            emotionsinsert(myemtions)
-            Log.d(TAG, "흠한번 볼까용?: ")
         }
+
+
 
 
     }
@@ -68,13 +79,22 @@ class Fragment2 : Fragment() {
 
             override fun onPostExecute(result: Unit?) {
                 super.onPostExecute(result)
-                emotionsdb.EmotionsDAO().emotionsgetAll()
+                emotionsgetall()
+
             }
 
 
-        })
+        }).execute()
 
 
+    }
+
+    private fun emotionsgetall() {
+        var getalltask= (object:AsyncTask<Unit,Unit,Unit>(){
+            override fun doInBackground(vararg p0: Unit?) {
+                emotionslist = emotionsdb.EmotionsDAO().emotionsgetAll()
+            }
+        }).execute()
     }
 
 

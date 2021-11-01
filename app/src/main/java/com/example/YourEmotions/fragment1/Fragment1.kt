@@ -1,7 +1,10 @@
 package com.example.YourEmotions.fragment1
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,14 +12,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.YourEmotions.EmotionsDB.EmotionsDataBase
+import com.example.YourEmotions.EmotionsDB.EmotionsEntity
 import com.example.YourEmotions.R
 import com.example.YourEmotions.SecondAactivity
 import com.example.YourEmotions.utils.App
+import com.example.YourEmotions.utils.utils.Companion.TAG
 import kotlinx.android.synthetic.main.fragment_1.*
 
 class Fragment1 : Fragment() {
 
-//    private var fragment1Adapter = fragment1_Adapter()
+
+    lateinit var emotionsList: List<EmotionsEntity>
+
+    lateinit var emotiondb :EmotionsDataBase
 
 
     companion object{
@@ -43,23 +52,48 @@ class Fragment1 : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val hihi = arrayListOf(
-            Emotions_item("안녕 클레오파트라","김승"),
-            Emotions_item("안녕 클레오파트라","김승현"),
-            Emotions_item("안녕 클레오파트라","김승현"),
-            Emotions_item("안녕 클레오파트라","김승현"),
-            Emotions_item("안녕 클레오파트라","김승현")
-            )
-
-        emotionsaying_RecyclerView.apply {
-            adapter = fragment1_Adapter(hihi)
-            layoutManager = GridLayoutManager(App.instance ,2,GridLayoutManager.VERTICAL,false)
 
 
 
-        }
+        emotiondb= EmotionsDataBase.getinstance(App.instance)!!
+
+        Log.d(TAG, "onViewCreated: ${arrayListOf<Emotions_item>()} ")
+        emotionsGetAll()
+//        emotionsaying_RecyclerView.apply {
+//
+//            fragment1Adapter = fragment1_Adapter()
+//            adapter = fragment1_Adapter()
+//            layoutManager = GridLayoutManager(App.instance ,2,GridLayoutManager.VERTICAL,false)
+//
+//
+//
+//        }
+    }
+    @SuppressLint("StaticFieldLeak")
+    private fun emotionsGetAll() {
+        val emotionsgetTask= (object :AsyncTask<Unit,Unit,Unit>() {
+            override fun doInBackground(vararg p0: Unit?) {
+                emotionsList = emotiondb.EmotionsDAO().emotionsgetAll()
+            }
+
+            override fun onPostExecute(result: Unit?) {
+                super.onPostExecute(result)
+
+                emtionsRecyclerView()
+            }
+
+        }).execute()
     }
 
+    private fun emtionsRecyclerView() {
+        val fragment1Adapter = fragment1_Adapter()
+        fragment1Adapter.submitlist(emotionsList)
+
+        emotionsaying_RecyclerView.apply {
+            layoutManager = GridLayoutManager(App.instance,2,GridLayoutManager.VERTICAL,false)
+            adapter = fragment1Adapter
+        }
+    }
 
 
 }

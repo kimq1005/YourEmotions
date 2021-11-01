@@ -50,7 +50,7 @@ class SecondAactivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                         .beginTransaction()
                         .replace(R.id.myframelayout, fragment1)
                         .commit()
-                    Log.d(utils.TAG, "onNavigationItemSelected: 첫번째")
+
                 }
 
                 R.id.today_emotionsaying -> {
@@ -59,7 +59,7 @@ class SecondAactivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                         .beginTransaction()
                         .replace(R.id.myframelayout, fragment2)
                         .commit()
-                    Log.d(utils.TAG, "onNavigationItemSelected: 두번째")
+
                 }
 
                 R.id.today_wisesaying -> {
@@ -68,7 +68,7 @@ class SecondAactivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                         .beginTransaction()
                         .replace(R.id.myframelayout, fragment3)
                         .commit()
-                    Log.d(utils.TAG, "onNavigationItemSelected: 세번째")
+
                 }
             }
             true

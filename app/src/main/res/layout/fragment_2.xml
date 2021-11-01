@@ -63,6 +63,17 @@
           app:layout_constraintStart_toStartOf="@+id/YourSaying"
           />
 
+      <TextView
+          android:textSize="10sp"
+          android:id="@+id/daotest_txt"
+          android:textColor="@color/white"
+          android:text="ddd"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
