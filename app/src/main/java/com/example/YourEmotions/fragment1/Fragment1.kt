@@ -28,6 +28,7 @@ class Fragment1 : Fragment() {
     lateinit var emotiondb :EmotionsDataBase
 
 
+
     companion object{
         fun newInstance() : Fragment1 {
             return Fragment1()
