@@ -1,113 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/mainlayout"
-    android:background="#2B1B17"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/leftTopstar"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_above="@id/main_logo"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="50dp"
-        android:src="@drawable/shinigstar" />
+    <View
+        android:id="@+id/mainView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/all_radius_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/leftTopstar"
-        android:layout_alignTop="@+id/leftTopstar"
-        android:layout_alignRight="@+id/leftTopstar"
-        android:layout_alignBottom="@+id/leftTopstar"
-        android:gravity="center"
-        android:text="별"
-        android:textColor="@color/white" />
-
-
-    <ImageView
-        android:id="@+id/rightTopstar"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_above="@id/main_logo"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="40dp"
-        android:src="@drawable/shinigstar" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/rightTopstar"
-        android:layout_alignTop="@+id/rightTopstar"
-        android:layout_alignRight="@+id/rightTopstar"
-        android:layout_alignBottom="@+id/rightTopstar"
-        android:gravity="center"
-        android:text="감성별"
-        android:textColor="@color/white" />
-
-
-    <ImageView
-        android:id="@+id/rightbottomcloud"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/main_logo"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="26dp"
-        android:src="@drawable/skycloud" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/rightbottomcloud"
-        android:layout_alignTop="@+id/rightbottomcloud"
-        android:layout_alignRight="@+id/rightbottomcloud"
-        android:layout_alignBottom="@+id/rightbottomcloud"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="-2dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="2dp"
-        android:gravity="center"
-        android:text="구름"
-        android:textColor="@color/white" />
-
-    <ImageView
-        android:id="@+id/leftbottomcloud"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/main_logo"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/skycloud" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/leftbottomcloud"
-        android:layout_alignTop="@+id/leftbottomcloud"
-        android:layout_alignRight="@+id/leftbottomcloud"
-        android:layout_alignBottom="@+id/leftbottomcloud"
-        android:gravity="center"
-        android:text="감성 구름"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/main_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
         android:layout_centerInParent="true"
         android:fontFamily="@font/nanumbrushscript_regular"
-        android:text="오늘 너의 하루는 어땠니..."
-        android:textSize="30sp" />
+        android:text="Your Emotions"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainView"
+        app:layout_constraintEnd_toEndOf="@+id/mainView"
+        app:layout_constraintStart_toStartOf="@+id/mainView"
+        app:layout_constraintTop_toTopOf="@+id/mainView" />
 
-</RelativeLayout>
+    <ImageView
+        app:layout_constraintStart_toEndOf="@+id/main_logo"
+        app:layout_constraintTop_toTopOf="@+id/main_logo"
+        app:layout_constraintEnd_toEndOf="@+id/mainView"
+        android:src="@drawable/leaf"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/nanumbrushscript_regular"
+        android:text="by SH2"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/mainView"
+        app:layout_constraintBottom_toBottomOf="@+id/mainView"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

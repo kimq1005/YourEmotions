@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/all_rectangle_radius"
     tools:context=".fragment1.Fragment1">
 
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="28sp"
+        android:fontFamily="@font/nanumbrushscript_regular"
+        android:textColor="@color/white"
+        android:id="@+id/frag1_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Emotions Diary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/frag1_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="20dp"
         android:id="@+id/emotionsaying_RecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
 
 
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

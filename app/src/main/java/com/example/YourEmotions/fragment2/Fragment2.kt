@@ -63,6 +63,7 @@ class Fragment2 : Fragment() {
         save_Your_EmotionsBtn.setOnClickListener{
             val yoursaying = EmotionsEntity(0,YourSaying.text.toString())
             emotionsinsert(yoursaying)
+            Toast.makeText(App.instance,"입력 완료",Toast.LENGTH_SHORT).show()
 
         }
 
