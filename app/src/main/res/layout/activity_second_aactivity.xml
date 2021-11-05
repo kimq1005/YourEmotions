@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#EBEFE6"
     android:id="@+id/second_layoutdrawer"
-    android:background="#222222"
     tools:context=".SecondAactivity">
 
     <RelativeLayout

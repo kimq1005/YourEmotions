@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/all_radius_corner"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/all_rectangle_radius"
     tools:context=".fragment1.Fragment1">
 
     <TextView

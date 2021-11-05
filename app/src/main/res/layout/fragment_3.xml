@@ -1,36 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/myblackcolor"
-    app:layoutDescription="@xml/fragment_3_scene"
-    tools:context=".Fragment3">
+    tools:context=".fragment3.Fragment3">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:id="@+id/myConstraintlayout"
-        android:background="@color/white"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment3RecyclerView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/mytxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_200"
-        android:gravity="center"
-        android:text="하이헬로안"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/myConstraintlayout"
-        app:layout_constraintEnd_toEndOf="@id/myConstraintlayout"
-        app:layout_constraintStart_toStartOf="@+id/myConstraintlayout"
-        app:layout_constraintTop_toTopOf="@+id/myConstraintlayout" />
+        android:layout_height="0dp"/>
 
 
-</androidx.constraintlayout.motion.widget.MotionLayout>
+    <FrameLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/myConstraintlayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:background="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/mytxt"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/purple_200"-->
+<!--        android:gravity="center"-->
+<!--        android:text="하이헬로안"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="25sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/myConstraintlayout"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/myConstraintlayout"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/myConstraintlayout"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/myConstraintlayout" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
