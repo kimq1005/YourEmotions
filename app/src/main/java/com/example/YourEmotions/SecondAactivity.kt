@@ -2,12 +2,14 @@ package com.example.YourEmotions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.core.view.GravityCompat
 import com.example.YourEmotions.fragment1.Fragment1
 import com.example.YourEmotions.fragment2.Fragment2
 import com.example.YourEmotions.fragment3.Fragment3
+import com.example.YourEmotions.utils.utils.Companion.TAG
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -24,6 +26,8 @@ class SecondAactivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_aactivity)
+
+        Log.d(TAG, "onCreate:로그야 되니?")
 
 
         menumenu.setOnClickListener {

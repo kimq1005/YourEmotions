@@ -27,12 +27,7 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/bottomnaviagtionview"
             android:layout_below="@+id/main_toptoolbar"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp" />
+            />
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView

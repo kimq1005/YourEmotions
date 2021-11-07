@@ -1,8 +1,9 @@
-package com.example.YourEmotions.utils
+package com.example.YourEmotions
 
 import android.app.Application
 
 class App:Application() {
+
     companion object {
         lateinit var instance: App
             private set

@@ -10,13 +10,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.YourEmotions.App
 import com.example.YourEmotions.EmotionsDB.EmotionsDataBase
 import com.example.YourEmotions.EmotionsDB.EmotionsEntity
 import com.example.YourEmotions.R
-import com.example.YourEmotions.SecondAactivity
-import com.example.YourEmotions.utils.App
 import com.example.YourEmotions.utils.utils.Companion.TAG
 import kotlinx.android.synthetic.main.fragment_1.*
 

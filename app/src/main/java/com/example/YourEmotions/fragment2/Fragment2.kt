@@ -4,18 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.os.AsyncTask
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.Observer
+import com.example.YourEmotions.App
 import com.example.YourEmotions.EmotionsDB.EmotionsDataBase
 import com.example.YourEmotions.EmotionsDB.EmotionsEntity
 import com.example.YourEmotions.R
-import com.example.YourEmotions.utils.App
-import com.example.YourEmotions.utils.utils.Companion.TAG
 import kotlinx.android.synthetic.main.emotionssaying_item.*
 import kotlinx.android.synthetic.main.fragment_2.*
 
