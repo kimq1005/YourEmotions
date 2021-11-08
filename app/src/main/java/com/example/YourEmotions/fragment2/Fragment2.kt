@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import com.example.YourEmotions.App
 import com.example.YourEmotions.EmotionsDB.EmotionsDataBase
 import com.example.YourEmotions.EmotionsDB.EmotionsEntity
@@ -20,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_2.*
 class Fragment2 : Fragment() {
 
     lateinit var emotionsdb:EmotionsDataBase
-
+    private var isWathingView  = true
     lateinit var emotionslist : List<EmotionsEntity>
 
     companion object{
@@ -49,18 +50,23 @@ class Fragment2 : Fragment() {
 
 
 
-//        daotest_txt.setOnClickListener {
-//            emotionsdb.EmotionsDAO().emotionsgetAll().observe(viewLifecycleOwner, Observer { it->
-//                daotest_txt.text = it.toString()
-//                Toast.makeText(App.instance,"dmdfszf",Toast.LENGTH_SHORT).show()
-//            })
-//        }
+
 
 
         save_Your_EmotionsBtn.setOnClickListener{
             val yoursaying = EmotionsEntity(0,YourSaying.text.toString())
             emotionsinsert(yoursaying)
             Toast.makeText(App.instance,"입력 완료",Toast.LENGTH_SHORT).show()
+
+
+
+        }
+
+        myclickbtn.setOnClickListener {
+            realgroupview.isVisible = isWathingView
+            testgroupView.isVisible = !isWathingView
+
+            isWathingView = !isWathingView
 
         }
 

@@ -14,6 +14,31 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent">
 
+
+      <androidx.constraintlayout.widget.Group
+          android:id="@+id/realgroupview"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          app:constraint_referenced_ids="Fragment2_textView, YourSaying, save_Your_EmotionsBtn"/>
+
+
+      <androidx.constraintlayout.widget.Group
+          android:id="@+id/testgroupView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:constraint_referenced_ids="daotest_txt"
+          />
+
+      <Button
+          android:id="@+id/myclickbtn"
+          android:text="clickhere"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
       <View
           android:id="@+id/myView"
           android:layout_width="0dp"
@@ -68,11 +93,12 @@
 
       <TextView
           android:id="@+id/daotest_txt"
-          android:layout_width="match_parent"
+          android:layout_width="0dp"
           android:layout_height="wrap_content"
-          android:text="ddd"
+          android:text="안녕하십쇼"
           android:textColor="@color/white"
-          android:textSize="10sp"
+          android:textSize="20sp"
+          android:gravity="center"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent" />

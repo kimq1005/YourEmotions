@@ -36,13 +36,20 @@ class fragment3_1: Fragment(R.layout.fragment_3_1) {
         val fragment31Binding = Fragment31Binding.bind(view)
         binding = fragment31Binding
 
+
+        setRecyclerView()
+
+
+        GETLIST()
+    }
+
+    private fun setRecyclerView() {
         fragment3Adapter = Fragment3Adapter()
         fragment3_1_RecyclerView.apply{
             adapter = fragment3Adapter
             layoutManager = LinearLayoutManager(App.instance)
 
         }
-        GETLIST()
     }
 
 

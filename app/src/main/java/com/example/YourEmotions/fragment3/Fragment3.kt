@@ -70,9 +70,9 @@ class Fragment3 : Fragment(R.layout.fragment_3) {
             layoutManager =LinearLayoutManager(App.instance)
         }
 
-        childFragmentManager.beginTransaction()
-            .replace(R.id.childfragment,fragment3_1())
-            .commit()
+//        childFragmentManager.beginTransaction()
+//            .replace(R.id.childfragment,fragment3_1())
+//            .commit()
 
 
 
